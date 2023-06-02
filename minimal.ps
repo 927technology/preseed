@@ -41,8 +41,8 @@ d-i passwd/root-password-again password P@ssw0rD
 #d-i passwd/root-password-crypted password [crypt(3) hash]
 
 #user account
-d-i passwd/user-fullname string admin
-d-i passwd/username string admin
+d-i passwd/user-fullname string support
+d-i passwd/username string support
 d-i passwd/user-password password P@ssw0rD
 d-i passwd/user-password-again password P@ssw0rD
 #d-i passwd/user-password-crypted password [crypt(3) hash]
@@ -121,8 +121,8 @@ d-i pkgsel/run_tasksel boolean false
 #install grub
 d-i grub-installer/only_debian boolean true
 d-i grub-installer/bootdev  string /dev/sda
-d-i grub-installer/password password p@ssw0rD
-d-i grub-installer/password-again password p@ssw0rD
+d-i grub-installer/password password P@ssw0rD
+d-i grub-installer/password-again password P@ssw0rD
 #d-i grub-installer/password-crypted password [MD5 hash]
 
 #reboot
