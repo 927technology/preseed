@@ -1,1 +1,1 @@
-# preseed
+Unattended Debian based installer.
