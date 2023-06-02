@@ -18,6 +18,10 @@ d-i netcfg/dhcp_timeout string 60
 
 #hostname
 d-i netcfg/hostname string minimal
+d-i netcfg/get_hostname unassigned-hostname 
+d-i netcfg/get_domain unassigned-domain
+d-i netcfg/get_hostname seen true
+d-i netcfg/get_domain seen true
 
 #non-free firmware
 d-i hw-detect/load_firmware boolean false
