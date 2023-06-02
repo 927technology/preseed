@@ -90,8 +90,8 @@ d-i apt-setup/cdrom/set-first boolean false
 d-i apt-setup/non-free boolean true
 d-i apt-setup/contrib boolean true
 
-#enable cdrom as apt source after reboot
-d-i apt-setup/disable-cdrom-entries boolean false
+#disable cdrom as apt source after reboot
+d-i apt-setup/disable-cdrom-entries boolean true
 
 #use mirrors
 d-i apt-setup/use_mirror boolean true
