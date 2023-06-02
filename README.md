@@ -2,6 +2,7 @@ Unattended Debian based installer.
 
 
 1. Boot Media
+*)
 |Architecture|Link|
 |x86_64|https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/debian-11.7.0-amd64-netinst.iso|
 1. Interupt the boot menu by pressing \<ESC\>
