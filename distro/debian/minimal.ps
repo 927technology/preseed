@@ -148,7 +148,5 @@ d-i cdrom-detect/eject boolean true
 #post script
 d-i preseed/late_command string                                                                                                 \
   /usr/bin/wget -P /target/tmp https://raw.githubusercontent.com/927technology/preseed/main/distro/debian/hostname/hostname.sh; \
-  /usr/bin/wget -P /target/tmp https://raw.githubusercontent.com/927technology/arcade/main/build/dosbox.sh;                     \
-  /usr/bin/wget -P /target/tmp https://raw.githubusercontent.com/927technology/arcade/main/build/xinit.sh player;               \                    \
   /bin/chmod 700 /target/tmp/hostname.sh;                                                                                       \
   /bin/in-target /tmp/hostname.sh arcade
