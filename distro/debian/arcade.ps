@@ -146,7 +146,7 @@ d-i cdrom-detect/eject boolean true
 #d-i partman/early_command \
 
 #post script
-d-i preseed/late_command string                                                                                               \
-  /usr/bin/wget -P /target/tmp https://raw.githubusercontent.com/927technology/preseed/main/distro/debian/hostname/config.sh; \
-  /bin/chmod 700 /target/tmp/hostname.sh;                                                                                     \
+d-i preseed/late_command string                                                                                                 \
+  /usr/bin/wget -P /target/tmp https://raw.githubusercontent.com/927technology/preseed/main/distro/debian/hostname/hostname.sh; \
+  /bin/chmod 700 /target/tmp/hostname.sh;                                                                                       \
   /bin/in-target /tmp/hostname.sh minimal
