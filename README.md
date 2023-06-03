@@ -15,7 +15,7 @@ Unattended Debian based installer.
 
 3. Append 
     ```
-    auto url=https://raw.githubusercontent.com/927technology/preseed/main/minimal.ps
+    auto url=https://raw.githubusercontent.com/927technology/preseed/main/distro/debian/minimal.ps
     ```
     ![change boot](./images/03.png)
 
