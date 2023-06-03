@@ -147,4 +147,5 @@ d-i cdrom-detect/eject boolean true
 
 #post script
 #d-i preseed/late_command string apt-install zsh; in-target chsh -s /bin/zsh
-d-i preseed/late_command string /usr/bin/curl -sk https://raw.githubusercontent.com/927technology/preseed/build/main/hostname.sh | /bin/bash -s minimal
+d-i preseed/late_command string                   \
+  in-target /usr/bin/curl -sk https://raw.githubusercontent.com/927technology/preseed/main/build/hostname.sh | /bin/bash -s minimal
