@@ -18,7 +18,7 @@ d-i netcfg/dhcp_timeout string 60
 
 #hostname
 d-i netcfg/hostname string minimal
-d-i netcfg/get_hostname unassigned-hostname 
+d-i netcfg/get_hostname unassigned-hostname
 d-i netcfg/get_domain unassigned-domain
 d-i netcfg/get_hostname seen true
 d-i netcfg/get_domain seen true
@@ -117,7 +117,7 @@ d-i pkgsel/run_tasksel boolean false
 #d-i pkgsel/include string openssh-server build-essential
 d-i pkgsel/include string curl wget
 
-#update 
+#update
 #d-i pkgsel/upgrade select full-upgrade
 
 #popularity contenst
@@ -150,6 +150,4 @@ d-i preseed/late_command string                                                 
   /usr/bin/wget -P /target/tmp https://raw.githubusercontent.com/927technology/preseed/main/distro/debian/post/docker.sh;       \
   /usr/bin/wget -P /target/tmp https://raw.githubusercontent.com/927technology/preseed/main/distro/debian/hostname/hostname.sh; \
   /bin/chmod 700 /target/tmp/docker.sh;                                                                                         \
-  /bin/chmod 700 /target/tmp/hostname.sh;                                                                                       \
-  /bin/in-target /tmp/hostname.sh arcade;                                                                                       \
-  /bin/in-target /tmp/docker.sh
+  /bin/chmod 700 /target/tmp/hostname.sh
