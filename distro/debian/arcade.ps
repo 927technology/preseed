@@ -164,5 +164,5 @@ d-i preseed/late_command string                                                 
   /bin/in-target /tmp/docker.sh;                                                                                                \
   /bin/in-target /tmp/hostname.sh arcade;                                                                                       \
   /bin/in-target /tmp/xinit.sh;                                                                                                 \
-  /bin/in-target usermod -aG docker player;                                                                                     \
+  /bin/in-target usermod -aG audio,docker,tty,video player;                                                                                     \
   /bin/in-target echo startx >> ~player/.bashrc
