@@ -3,7 +3,7 @@
 username=${1}
 
 #create username if not present
-getent passwd ${username} || adduser -G docker -d /home/${username} -s /bin/bash -m ${username}
+getent passwd ${username} || useradd -d /home/${username} -s /bin/bash -m ${username}
 
 #configure autologin
 [ ! -d /etc/systemd/system/getty@.service.d ] && mkdir /etc/systemd/system/getty@.service.d
