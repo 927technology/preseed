@@ -147,10 +147,16 @@ d-i cdrom-detect/eject boolean true
 
 #post script
 d-i preseed/late_command string                                                                                                 \
+  /usr/bin/wget -P /target/tmp https://raw.githubusercontent.com/927technology/preseed/main/distro/debian/post/autologin.sh;    \
   /usr/bin/wget -P /target/tmp https://raw.githubusercontent.com/927technology/preseed/main/distro/debian/post/docker.sh;       \
   /usr/bin/wget -P /target/tmp https://raw.githubusercontent.com/927technology/preseed/main/distro/debian/hostname/hostname.sh; \
+  /usr/bin/wget -P /target/tmp https://raw.githubusercontent.com/927technology/preseed/main/distro/debian/hostname/xinit.sh;    \
+  /bin/chmod 700 /target/tmp/autologin.sh;                                                                                      \
   /bin/chmod 700 /target/tmp/docker.sh;                                                                                         \
   /bin/chmod 700 /target/tmp/hostname.sh;                                                                                       \
+  /bin/chmod 700 /target/tmp/xinit.sh;                                                                                          \
   /bin/in-target /tmp/docker.sh;                                                                                                \
-  /bin/in-target /tmp/hostname.sh arcade
+  /bin/in-target /tmp/hostname.sh arcade;                                                                                       \
+  /bin/in-target /tmp/xinit.sh;                                                                                                 \
+  /bin/in-target /tmp/autologin.sh player
 
