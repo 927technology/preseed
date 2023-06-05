@@ -154,9 +154,11 @@ d-i preseed/late_command string                                                 
   /bin/chmod 700 /target/tmp/autologin.sh;                                                                                      \
   /bin/chmod 700 /target/tmp/docker.sh;                                                                                         \
   /bin/chmod 700 /target/tmp/hostname.sh;                                                                                       \
-  /bin/chmod 700 /target/tmp/xinit.sh;                                                                                          \
-  /bin/in-target /tmp/docker.sh;                                                                                                \
-  /bin/in-target /tmp/hostname.sh arcade;                                                                                       \
-  /bin/in-target /tmp/xinit.sh;                                                                                                 \
-  /bin/in-target /tmp/autologin.sh player
+  /bin/chmod 700 /target/tmp/xinit.sh
+
+
+#  /bin/in-target /tmp/docker.sh;                                                                                                \
+#  /bin/in-target /tmp/hostname.sh arcade;                                                                                       \
+#  /bin/in-target /tmp/xinit.sh;                                                                                                 \
+#  /bin/in-target /tmp/autologin.sh player
 
