@@ -2,7 +2,7 @@
 
 #dependancies
 apt-get update
-apt-get install ca-certificates curl gnupg
+apt-get install -y ca-certificates curl gnupg
 
 #gpg
 install -m 0755 -d /etc/apt/keyrings
@@ -17,7 +17,7 @@ echo \
 
 #install
 apt-get update
-apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+apt-get install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 
 #autostart service
 systemctl enable docker
