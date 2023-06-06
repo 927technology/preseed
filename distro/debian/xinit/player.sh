@@ -1,6 +1,8 @@
 #!/bin/bash
 
-cat << EOF > ~player/.xinitrc
-matchbox-window-manager & \
-    attract
+cat << EOF > /home/player/.xinitrc
+#!/bin/bash
+/usr/bin/matchbox-window-manager & /usr/local/bin/attract
 EOF 
+
+chmod 700 /home/player/.xinitrc
