@@ -159,11 +159,11 @@ d-i preseed/late_command string                                                 
   /bin/chmod 700 /target/tmp/hostname.sh;                                                                                       \
   /bin/chmod 700 /target/tmp/xinit.sh;                                                                                          \
   /bin/chmod 700 /target/tmp/player;                                                                                            \
-  /bin/in-target echo "startx" >> /home/player/.bashrc & chmod 700 /hme/player/.bashrc
+  /bin/in-target /tmp/autologin.sh player
 
-#  /bin/in-target /tmp/autologin.sh player;                                                                                      \
 #  /bin/in-target /tmp/attract.sh;                                                                                               \
 #  /bin/in-target /tmp/docker.sh;                                                                                                \
 #  /bin/in-target /tmp/hostname.sh arcade;                                                                                       \
 #  /bin/in-target /tmp/xinit.sh;                                                                                                 \
 #  /bin/in-target usermod -aG audio,docker,tty,video player;                                                                                     \
+#  /bin/in-target echo "startx" >> /home/player/.bashrc & chmod 700 /hme/player/.bashrc
