@@ -13,3 +13,5 @@ startx
 EOF
 
 chmod 700 /home/player/.bashrc
+
+usermod -aG audio,docker,tty,video player
