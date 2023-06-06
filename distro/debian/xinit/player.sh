@@ -6,3 +6,10 @@ cat << EOF > /home/player/.xinitrc
 EOF 
 
 chmod 700 /home/player/.xinitrc
+
+cat << EOF > /home/player/.bashrc
+#!/bin/bash
+startx
+EOF
+
+chmod 700 /home/player/.bashrc
