@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cat << EOF > /home/player/.xinitrc
+cat << 'EOF' > /home/player/.xinitrc
 #!/bin/bash
 /usr/bin/matchbox-window-manager & /usr/local/bin/attract
 EOF 
@@ -10,10 +10,10 @@ chmod 750 /home/player/.xinitrc
 
 rm -f /home/player/.bashrc
 
-cat << EOF2 > /home/player/.bashrc
+cat << 'EOF' > /home/player/.bashrc
 #!/bin/bash
 /usr/bin/startx
-EOF2
+EOF
 
 chown root:player /home/player/.bashrc
 chmod 750 /home/player/.bashrc
