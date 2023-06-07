@@ -26,7 +26,7 @@ chmod 750 /home/player/.bashrc
 #add player permission groups for xserver
 usermod -aG audio,docker,tty,video player
 
-#get git setup for arcade
+#get git setup for attract
 [ ! -d /home/player/git ] && mkdir -p /home/player/git
 cd /home/player/git
 [ ! -d /home/player/git/arcade ] && git clone https://github.com/927technology/arcade.git
@@ -34,3 +34,7 @@ cd /home/player/git
 [ -f /home/player/.attract ] && rm -f /home/player/.attract
 [ -L /home/player/.attract ] && unlink /home/player/.attract
 ln -s ./git/arcade/config/.attract /home/player/.attract
+
+#hide grub boot menu
+sed 's/GRUB_TIMEOUT\=\([0-9]*\)/GRUB_TIMEOUT\=0/s' /etc/default/grub
+update-grub
