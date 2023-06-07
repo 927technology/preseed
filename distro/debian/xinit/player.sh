@@ -9,9 +9,10 @@ chmod 700 /home/player/.xinitrc
 
 cat << EOF > /home/player/.bashrc
 #!/bin/bash
-startx
+/usr/bin/startx
 EOF
 
-chmod 700 /home/player/.bashrc
+chown root:player /home/player/.bashrc
+chmod 750 /home/player/.bashrc
 
 usermod -aG audio,docker,tty,video player
