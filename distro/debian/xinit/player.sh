@@ -27,7 +27,14 @@ chmod 750 /home/player/.bashrc
 usermod -aG audio,docker,tty,video player
 
 #get git setup for arcade
-mkdir -p /home/player/git
+[ ! -d /home/player/git ] && mkdir -p /home/player/git
 cd /home/player/git
-git clone https://github.com/927technology/arcade.git
+if [ ! -d /home/player/git/arcade ]; then
+    git clone https://github.com/927technology/arcade.git
+else
+    cd /home/player/git/arcade
+    git fetch
+    git pull
+fi
+
 ln -s ./git/arcade/config/.attract /home/player/.attract
