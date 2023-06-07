@@ -30,4 +30,4 @@ usermod -aG audio,docker,tty,video player
 mkdir -p /home/player/git
 cd /home/player/git
 git clone https://github.com/927technology/arcade.git
-ls -s ./git/arcade/config/.attract /home/player/.attract
+ln -s ./git/arcade/config/.attract /home/player/.attract
