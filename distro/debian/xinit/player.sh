@@ -5,7 +5,10 @@ cat << EOF > /home/player/.xinitrc
 /usr/bin/matchbox-window-manager & /usr/local/bin/attract
 EOF 
 
-chmod 700 /home/player/.xinitrc
+chown root:player /home/player/.xinitrc
+chmod 750 /home/player/.xinitrc
+
+rm -f /home/player/.bashrc
 
 cat << EOF > /home/player/.bashrc
 #!/bin/bash
