@@ -29,12 +29,8 @@ usermod -aG audio,docker,tty,video player
 #get git setup for arcade
 [ ! -d /home/player/git ] && mkdir -p /home/player/git
 cd /home/player/git
-if [ ! -d /home/player/git/arcade ]; then
-    git clone https://github.com/927technology/arcade.git
-else
-    cd /home/player/git/arcade
-    git fetch
-    git pull
-fi
-
+[ ! -d /home/player/git/arcade ] && git clone https://github.com/927technology/arcade.git
+[ -d /home/player/.attract ] && rm -rf /home/player/.attract
+[ -f /home/player/.attract ] && rm -f /home/player/.attract
+[ -L /home/player/.attract ] && unlink /home/player/.attract
 ln -s ./git/arcade/config/.attract /home/player/.attract
