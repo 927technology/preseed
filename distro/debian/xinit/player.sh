@@ -36,5 +36,5 @@ cd /home/player/git
 ln -s ./git/arcade/config/.attract /home/player/.attract
 
 #hide grub boot menu
-sed -i 's/GRUB_TIMEOUT\=\([0-9]*\)/GRUB_TIMEOUT\=0/s' /etc/default/grub
+sed -i 's/GRUB_TIMEOUT\=\([0-9]*\)/GRUB_TIMEOUT\=0/g' /etc/default/grub
 update-grub
